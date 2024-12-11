@@ -1,0 +1,44 @@
+<div class="from section">
+    <img
+        class="section__banner"
+        src="./images/calc-4.jpg"
+        alt="баннер страницы"
+        width="460"
+        height="350"
+    >
+    <div class="section__slide">
+        <h1 class="section__heading">Какую валюту вы хотите обменять?</h1>
+        <form class="currency">
+            <label
+                for="currency-select"
+                class="currency__select"
+            ></label>
+            <select
+                name="currency-from"
+                id="currency-select"
+                class="currency__list currency__list--from"
+                required
+            >
+                <option
+                    class="currency__option"
+                    selected
+                    value="RUB"
+                    data-rate="1"
+                >Российский рубль</option>
+            </select>
+        </form>
+
+        <div class="section__btns section__btns--plus">
+            <button
+                class="section__btn section__btn--back"
+                type="button"
+                data-step="0"
+            >Назад</button>
+            <button
+                class="section__btn"
+                type="button"
+                data-step="2"
+            >Дальше</button>
+        </div>
+    </div>
+</div>

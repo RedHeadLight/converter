@@ -1,0 +1,193 @@
+// Общее.
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main__slider {
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 30px;
+    position: relative;
+
+    @media(min-width: 700px) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    &--result {
+        display: block;
+
+        .section__slide {
+            position: relative;
+            z-index: 1;
+            background-image: url("../images/gold.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 40px;
+        }
+    }
+}
+
+.section__banner {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+
+    @media(min-width: 700px) {
+        margin: 0;
+    }
+}
+
+.section__slide {
+    text-align: center;
+
+    @media(min-width: 700px) {
+        text-align: left;
+    }
+}
+
+.section__heading {
+    font-size: 32px;
+    margin: 0;
+
+    @media(min-width: 1200px) {
+        font-size: 40px;
+    }
+
+    &--final {
+        text-align: center;
+        color: #FFFFFF;
+    }
+}
+
+.section__description {
+    font-size: 18px;
+    margin-top: 20px;
+
+    @media(min-width: 700px) {
+        font-size: 21px;
+        margin-top: 40px;
+    }
+}
+
+.section__btns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+
+    @media(min-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 92px;
+    }
+
+    &--plus {
+        margin-top: 22px;
+    }
+}
+
+.section__btn {
+    background-color: #FFD700;
+    padding: 20px;
+    border-radius: 19px;
+    color: #808080;
+    flex-grow: 1;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    &:only-child {
+        grid-column: 2/3;
+    }
+
+    &--back {
+        background-color: transparent;
+        border: 1px solid #808080;
+    }
+
+    &--fin {
+        color: rgba(255, 215, 0, 0.5);
+    }
+}
+
+.currency__list {
+    width: 100%;
+    background-color: rgba(255, 215, 0, 0.3);
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.currency__result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.currency__wrapper {
+    flex-grow: 1;
+}
+
+.currency__result-label {
+    color: #FFFFFF;
+}
+
+.currency__result-input {
+    border: 1px solid #FFD700;
+    border-radius: 30px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgba(255, 215, 0, 0.3);
+    color: #FFFFFF;
+}
+
+.currency__result-input::-webkit-outer-spin-button,
+.currency__result-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.currency__result-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+// Стили слайдера
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slick-dots li {
+    color: transparent;
+    flex-grow: 1;
+    pointer-events: none;
+}
+
+.slick-dots .slick-active~li {
+    filter: grayscale(1);
+}
+
+.slick-dots button {
+    background-color: #FFD700;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    height: 20px;
+    color: transparent;
+}
